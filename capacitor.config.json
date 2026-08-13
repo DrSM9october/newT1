@@ -1,6 +1,0 @@
-{
-  "appId": "com.linguaai.dialect",
-  "appName": "DialectAI",
-  "webDir": "dist",
-  "bundledWebRuntime": false
-}
