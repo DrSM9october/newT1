@@ -1,0 +1,6 @@
+{
+  "name": "DialectAI Language Academy",
+  "description": "Multi-dialect AI language learning app supporting American English, Iraqi Arabic, and Lebanese Arabic with voice synthesis, SRS memory, pronunciation engine, and roleplay scenarios.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
