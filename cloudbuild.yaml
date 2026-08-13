@@ -1,0 +1,9 @@
+steps:
+- name: gcr.io/cloud-builders/docker
+  args: ["build","-t","gcr.io/$PROJECT_ID/linguaai:$COMMIT_SHA","."]
+- name: gcr.io/cloud-builders/docker
+  args: ["push","gcr.io/$PROJECT_ID/linguaai:$COMMIT_SHA"]
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  entrypoint: gcloud
+  args: ["run","deploy","linguaai","--image=gcr.io/$PROJECT_ID/linguaai:$COMMIT_SHA","--region=europe-west2","--platform=managed","--allow-unauthenticated","--port=8080","--memory=2Gi","--cpu=2"]
+images: ["gcr.io/$PROJECT_ID/linguaai:$COMMIT_SHA"]
